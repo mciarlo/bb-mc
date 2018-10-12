@@ -278,12 +278,13 @@ p {
 .next-btn {
   position: absolute;
   display: block;
-  right: 0;
-  bottom: 0;
+  right: 5px;
+  bottom: 5px;
   z-index: 10;
   background: rgba(0,0,0, .8) url("../images/right_arrow.png") center no-repeat;
   background-size: 10px auto;
-  padding: 30px;
+  width: 40px;
+  height: 40px;
   font-size: 0;
   text-indent: -9999px;
 }
