@@ -1,0 +1,418 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrapper {
+  width: 90%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+html, body {
+  background-color: #fff;
+  font-family: "Prompt", Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+p, a {
+  font-family: -apple-system, Helvetica, sans-serif;
+}
+
+.button {
+  border: 2px solid #E72C2C;
+  padding: 14px 26px;
+  font-size: 12px;
+  color: #E72C2C;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: none;
+}
+
+.button:hover {
+  background-color: #E72C2C;
+  color: white;
+}
+
+nav {
+  box-sizing: border-box;
+  text-align: center;
+  position: relative;
+  background: #1f1f1f;
+  padding: 24px 40px 20px;
+}
+
+nav p {
+  font-size: 10px;
+  color: #757575;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 4px 0;
+}
+
+h2 {
+  text-transform: uppercase;
+  letter-spacing: -.5px;
+  font-size: 36px;
+  line-height: 1;
+  position: relative;
+  font-weight: bold;
+  font-style: italic;
+}
+
+p {
+  line-height: 1.4;
+  font-weight: 100;
+}
+
+.bbmc-logo {
+  width: 140px;
+  display: inline-block;
+}
+
+.nr2003-logo {
+  width: 64px;
+  position: absolute;
+  left: 40px;
+  top: 24px;
+  display: none;
+}
+
+.track-nav {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.track-nav li.new::after,
+.track.new h2::before {
+  content: "NEW";
+  font-size: 11px;
+  padding: 2px 3px;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background-color: #E72C2C;
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  margin-left: -18px
+}
+
+.track.new h2::before {
+  top: 0px;
+  left: 0;
+  margin-left: 0
+}
+
+.track-nav li {
+  vertical-align: top;
+  padding: 90px 0 30px;
+  display: inline-block;
+  width: 210px;
+  text-align: center;
+  position: relative;
+}
+
+.track-nav img {
+  position: absolute;
+  height: 90px;
+  width: 150px;
+  top: 0;
+  left: 50%;
+  margin-left: -75px;
+  opacity: .2;
+  transition: opacity 150ms ease-in-out;
+}
+
+.track-nav a:hover img {
+  opacity: 1;
+}
+
+.track-nav a:hover .track-title {
+  color: #E72C2C
+}
+
+.track-title,
+.track-status {
+  display: block;
+  line-height: 1.6
+}
+
+.track-title {
+  font-size: 15px;
+  color: #222;
+  font-weight: 600;
+  letter-spacing: 0px;
+}
+
+.pending .track-title {
+  color: #7B7B7B;
+}
+
+.track-status {
+  font-size: 13px;
+  color: #7B7B7B;
+  text-align: center;
+}
+
+.track {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.details-sidebar {
+  background: #1F1F1F;
+  color: white;
+  padding: 60px 40px;
+  position: relative;
+}
+
+.track h2 {
+  margin-bottom: 1em;
+  position: relative;
+  z-index: 2;
+}
+
+.track p {
+  color: #999;
+  line-height: 1.8;
+  font-size: 15px;
+  margin-bottom: 2em;
+  max-width: 400px;
+}
+
+.track.new h2 {
+  padding-top: 30px;
+}
+
+.details-sidebar {
+  overflow: hidden;
+}
+
+.details-sidebar img {
+  position: absolute;
+  top: 20px;
+  left: -30px;
+  width: 200px;
+  z-index: 1;
+}
+
+.track.new .details-sidebar img {
+  top: 46px
+}
+
+.gallery {
+  background-color: #1F1F1F;
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  overflow: hidden;
+}
+
+.gallery li {
+  position: relative;
+}
+
+.gallery img {
+  display: block;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 200ms ease-in-out;
+}
+
+.gallery li:nth-child(n+2) {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.gallery li.active img {
+  opacity: 1
+}
+
+.next-btn {
+  position: absolute;
+  display: block;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  background: rgba(0,0,0, .8) url("../images/right_arrow.png") center no-repeat;
+  background-size: 10px auto;
+  padding: 30px;
+  font-size: 0;
+  text-indent: -9999px;
+}
+
+#donate {
+  padding: 140px 0 160px;
+  text-align: center;
+}
+
+#donate h2 {
+  font-size: 48px;
+  padding: .2em 0 .5em;
+}
+
+form input[type=image] {
+  width: 186px;
+  height: 57px;
+  opacity: 1;
+  transition: opacity 100ms ease-in-out;
+}
+
+form input[type=image]:hover {
+  opacity: .8;
+}
+
+.sandbox-track {
+  width: 80%;
+  margin-bottom: 40px;
+}
+
+@media screen and (min-width:768px) {
+  .button {
+    display: inline-block;
+  }
+
+  .nr2003-logo {
+    display: block;
+  }
+
+  .track-nav {
+    padding: 50px 0;
+    text-align: center;
+  }
+
+  .track-nav {
+    padding: 80px 0;
+  }
+
+  .track-nav li {
+    padding: 90px 0 0;
+  }
+
+  .sandbox-track {
+    width: 495px;
+    margin-bottom: 60px;
+  }
+
+  #donate {
+    padding: 160px 0 240px;
+  }
+
+  #donate h2 {
+    font-size: 67px;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .track {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-bottom: 60px;
+  }
+
+  .track h2 {
+    margin-bottom: 2.5em;
+  }
+
+  .details-sidebar {
+    width: 30%;
+  }
+
+  .details-sidebar img {
+    top: 24px;
+    left: -80px;
+    width: 300px;
+  }
+
+  .track.new .details-sidebar img {
+    top: 42px;
+  }
+
+  .gallery img {
+    width: auto;
+    height: 600px;
+    margin-left: -230px;
+  }
+
+  .details-sidebar {
+    padding: 80px 40px;
+  }
+}
+
+@media screen and (min-width:1180px) {
+  .details-sidebar {
+    width: 25%;
+  }
+
+  .gallery img {
+    width: 140%;
+    height: auto;
+    margin-left: -20%;
+  }
+}
+
+@media screen and (min-width:1280px) {
+  .gallery img {
+    width: 120%;
+    margin-left: -10%;
+  }
+}
+
+@media screen and (min-width:1420px) {
+  .details-sidebar {
+    width: 20%;
+  }
+
+  .gallery img {
+    width: 110%;
+    margin-left: -5%;
+  }
+}
