@@ -70,7 +70,7 @@ p, a {
   letter-spacing: 1px;
   text-transform: uppercase;
   font-weight: bold;
-  display: none;
+  display: inline-block;
 }
 
 .button:hover {
@@ -96,8 +96,7 @@ nav p {
 
 h2 {
   text-transform: uppercase;
-  letter-spacing: -.2px;
-  font-size: 36px;
+  font-size: 22px;
   line-height: 1;
   position: relative;
   font-weight: bold;
@@ -221,9 +220,11 @@ p {
 .track p {
   color: #999;
   line-height: 1.8;
-  font-size: 15px;
+  font-size: 14px;
   margin-bottom: 2em;
   max-width: 400px;
+  position: relative;
+  z-index: 2;
 }
 
 .track.new h2 {
@@ -321,10 +322,6 @@ form input[type=image]:hover {
 }
 
 @media screen and (min-width:768px) {
-  .button {
-    display: inline-block;
-  }
-
   .nr2003-logo {
     display: block;
   }
@@ -340,6 +337,15 @@ form input[type=image]:hover {
 
   .track-nav li {
     padding: 90px 0 0;
+  }
+
+  h2 {
+    letter-spacing: -.2px;
+    font-size: 36px;
+  }
+
+  .track p {
+    font-size: 15px;
   }
 
   .sandbox-track {
