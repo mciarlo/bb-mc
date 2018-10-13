@@ -330,7 +330,7 @@ form input[type=image]:hover {
 }
 
 footer {
-  color: #767676;
+  color: #686868;
   background: #1f1f1f;
   text-align: center;
   padding: 50px 0 116px;
@@ -338,11 +338,11 @@ footer {
 }
 
 footer a {
-  color: #eaeaea;
+  color: #a1a1a1;
 }
 
 footer a:hover {
-  color: #999;
+  color: #eaeaea;
 }
 
 @media screen and (min-width:520px) {
@@ -447,11 +447,6 @@ footer a:hover {
     margin-left: -10%;
   }
 
-  .track h2 {
-    font-size: 48px;
-  }
-
-
   footer {
     padding: 60px 0 140px;
   }
@@ -461,6 +456,10 @@ footer a:hover {
   .details-sidebar {
     width: 26%;
     padding: 80px 60px;
+  }
+
+  .track h2 {
+    font-size: 46px;
   }
 
   .gallery img {
