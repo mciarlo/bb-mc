@@ -222,7 +222,8 @@ p {
   z-index: 2;
 }
 
-.track p {
+.track p,
+#donate p {
   color: #999;
   line-height: 1.8;
   font-size: 14px;
@@ -298,25 +299,35 @@ p {
 }
 
 #donate {
-  padding: 140px 0 160px;
-  text-align: center;
-}
-
-#donate p {
-  font-size: 12px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+  padding: 80px 0 620px;
+  text-align: left;
+  background: #000 url("../images/about_bg_vertical.jpg") 0 440px no-repeat;
+  background-size: 140% auto;
 }
 
 #donate h2 {
-  font-size: 48px;
-  padding: .3em 0 .8em;
+  margin-bottom: 1.4em
+}
+
+#donate h2,
+#donate p {
+  display: block;
+  text-shadow: 0 1px 2px #000;
+}
+
+#donate p,
+#donate h2,
+#donate form {
+  padding: 0 20px;
+  color: white;
 }
 
 form input[type=image] {
+  margin-top: 60px;
   width: 186px;
   height: 57px;
   opacity: 1;
+  display: block;
   transition: opacity 100ms ease-in-out;
 }
 
@@ -330,11 +341,19 @@ form input[type=image]:hover {
 }
 
 footer {
-  color: #686868;
+  color: #656565;
   background: #1f1f1f;
   text-align: center;
-  padding: 50px 0 116px;
   font-size: 13px;
+}
+
+footer img {
+  width: 60px;
+  padding: 14px 0 0;
+}
+
+footer .wrapper {
+  padding: 30px 0 60px;
 }
 
 footer a {
@@ -345,9 +364,56 @@ footer a:hover {
   color: #eaeaea;
 }
 
+@media screen and (min-width:360px) {
+  #donate {
+    padding-bottom: 480px;
+    background-position: 0 400px;
+    background-size: 100% auto;
+  }
+}
+
+@media screen and (min-width:410px) {
+  #donate {
+    padding-bottom: 480px;
+    background-position: 0 300px;
+  }
+}
+
+@media screen and (min-width:460px) {
+  #donate {
+    padding-bottom: 520px;
+    background-position: 0 220px;
+  }
+}
+
+@media screen and (min-width:480px) {
+  #donate {
+    padding-bottom: 680px;
+    background-position: 0 240px;
+  }
+}
+
 @media screen and (min-width:520px) {
   .details-sidebar img {
     width: 230px;
+  }
+
+  #donate {
+    padding-bottom: 720px;
+    background-position: 0 120px;
+  }
+}
+
+@media screen and (min-width:625px) {
+  #donate {
+    padding-bottom: 760px;
+    background-position: 0 0px;
+  }
+}
+
+@media screen and (min-width:720px) {
+  #donate {
+    padding-bottom: 820px;
   }
 }
 
@@ -388,11 +454,16 @@ footer a:hover {
   }
 
   #donate {
-    padding: 160px 0 240px;
+    padding: 160px 0;
+    background: #111 url("../images/about_bg.jpg") top left no-repeat;
+    background-size: 120% auto;
+    margin-top: 120px;
   }
 
-  #donate h2 {
-    font-size: 67px;
+  #donate p,
+  #donate h2,
+  #donate form {
+    padding: 0 40px;
   }
 }
 
@@ -419,8 +490,8 @@ footer a:hover {
     margin-left: -230px;
   }
 
-  .details-sidebar {
-    padding: 60px 40px;
+  #donate {
+    background-size: 100% auto;
   }
 }
 
@@ -447,8 +518,9 @@ footer a:hover {
     margin-left: -10%;
   }
 
-  footer {
-    padding: 60px 0 140px;
+  footer .wrapper {
+    padding: 60px 0 120px;
+    position: relative;
   }
 }
 
@@ -458,12 +530,18 @@ footer a:hover {
     padding: 80px 60px;
   }
 
-  .track h2 {
+  h2 {
     font-size: 46px;
   }
 
   .gallery img {
     width: 110%;
     margin-left: -5%;
+  }
+
+  #donate p,
+  #donate h2,
+  #donate form {
+    padding-left: 60px;
   }
 }
