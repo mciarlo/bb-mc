@@ -118,6 +118,10 @@ p {
   display: inline-block;
 }
 
+.nr2003-logo {
+  display: none;
+}
+
 .track-nav {
   padding: 50px 0;
   text-align: center;
@@ -410,6 +414,14 @@ footer a:hover {
 }
 
 @media screen and (min-width:768px) {
+  .nr2003-logo {
+    display: block;
+    position: absolute;
+    top: 22px;
+    right: 40px;
+    width: 70px;
+  }
+
   .track-nav {
     padding: 50px 0;
     text-align: center;
