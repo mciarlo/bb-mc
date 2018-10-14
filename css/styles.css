@@ -88,7 +88,8 @@ nav {
   box-sizing: border-box;
   text-align: center;
   position: relative;
-  background: #1f1f1f;
+  background: #1f1f1f url("../images/nav_bg.jpg") top left repeat;
+  background-size: 15px auto;
   padding: 24px 40px 20px;
 }
 
@@ -201,15 +202,18 @@ p {
 }
 
 .track {
+  background: #1F1F1F;
   position: relative;
   margin-bottom: 30px;
 }
 
 .details-sidebar {
   background: #1F1F1F;
+  background-size: 26px 26px;
   color: white;
   padding: 60px 40px;
   position: relative;
+  overflow: hidden;
 }
 
 .track h2 {
@@ -231,10 +235,6 @@ p {
 
 .track.new h2 {
   padding-top: 30px;
-}
-
-.details-sidebar {
-  overflow: hidden;
 }
 
 .details-sidebar img {
@@ -337,10 +337,13 @@ form input[type=image]:hover {
 }
 
 footer {
-  color: #656565;
-  background: #1f1f1f;
+  color: #999;
+  background: white url("../images/content_bg.jpg") bottom left repeat-x;
+  background-size: 32px auto;
   text-align: center;
-  font-size: 13px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 footer img {
@@ -349,15 +352,15 @@ footer img {
 }
 
 footer .wrapper {
-  padding: 30px 0 60px;
+  padding: 40px 0 90px;
 }
 
 footer a {
-  color: #a1a1a1;
+  color: #656565;
 }
 
 footer a:hover {
-  color: #eaeaea;
+  color: #222;
 }
 
 @media screen and (min-width:360px) {
@@ -513,13 +516,30 @@ footer a:hover {
 }
 
 @media screen and (min-width:1280px) {
+  nav {
+    padding: 44px 40px 40px;
+  }
+
+  .nr2003-logo {
+    top: 42px;
+  }
+
   .gallery img {
     width: 120%;
     margin-left: -10%;
   }
 
+  footer {
+    font-size: 12px;
+  }
+
+  footer img {
+    padding-top: 18px;
+    width: 90px;
+  }
+
   footer .wrapper {
-    padding: 60px 0 120px;
+    padding: 90px 0 120px;
     position: relative;
   }
 }
