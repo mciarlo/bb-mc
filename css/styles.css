@@ -420,9 +420,9 @@ footer a:hover {
   .nr2003-logo {
     display: block;
     position: absolute;
-    top: 22px;
+    top: 24px;
     right: 40px;
-    width: 70px;
+    width: 60px;
   }
 
   .track-nav {
@@ -496,6 +496,11 @@ footer a:hover {
   #donate {
     background-size: 100% auto;
   }
+
+  footer img {
+    padding-top: 18px;
+    width: 100px;
+  }
 }
 
 @media screen and (min-width:1180px) {
@@ -521,7 +526,7 @@ footer a:hover {
   }
 
   .nr2003-logo {
-    top: 42px;
+    top: 44px;
   }
 
   .gallery img {
@@ -534,8 +539,7 @@ footer a:hover {
   }
 
   footer img {
-    padding-top: 18px;
-    width: 90px;
+    width: 120px;
   }
 
   footer .wrapper {
