@@ -233,6 +233,15 @@ p {
   z-index: 2;
 }
 
+.track a {
+  color: #E72C2C;
+}
+
+.track a:hover {
+  color: #E72C2C;
+  text-decoration: underline;
+}
+
 .track.new h2 {
   padding-top: 30px;
 }
