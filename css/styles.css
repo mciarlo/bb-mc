@@ -543,8 +543,8 @@ footer a:hover {
   }
 
   .gallery img {
-    width: 120%;
-    margin-left: -10%;
+    width: 130%;
+    margin-left: -15%;
   }
 
   footer {
@@ -569,11 +569,6 @@ footer a:hover {
 
   h2 {
     font-size: 46px;
-  }
-
-  .gallery img {
-    width: 110%;
-    margin-left: -5%;
   }
 
   #donate p,
