@@ -124,7 +124,7 @@ p {
 }
 
 .track-nav {
-  padding: 40px 0;
+  padding: 50px 0;
   text-align: center;
 }
 
@@ -132,7 +132,7 @@ p {
 .track.new h2::before {
   content: "NEW";
   font-size: 11px;
-  padding: 12px 3px;
+  padding: 2px 3px;
   color: #fff;
   font-weight: bold;
   letter-spacing: 1px;
@@ -444,7 +444,11 @@ footer a:hover {
   }
 
   .track-nav li {
-    padding: 84px 0 0;
+    padding: 94px 0 0;
+  }
+
+  .track-nav img {
+    top: 10px;
   }
 
   h2 {
