@@ -438,6 +438,11 @@ footer a:hover {
     text-align: center;
   }
 
+  .track-nav li.new::after,
+  .track.new h2::before {
+    top: 75px;
+  }
+
   .track-nav {
     padding: 80px 0;
   }
