@@ -79,6 +79,10 @@ p, a {
   z-index: 2;
 }
 
+em {
+  font-style: italic;
+}
+
 .button:hover {
   background-color: #E72C2C;
   color: white;
