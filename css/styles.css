@@ -441,17 +441,13 @@ footer a:hover {
   }
 
   .track-nav {
-    padding: 50px 0;
+    padding: 60px 0 80px;
     text-align: center;
   }
 
   .track-nav li.new::after,
   .track.new h2::before {
     top: 75px;
-  }
-
-  .track-nav {
-    padding: 80px 0;
   }
 
   .track-nav li {
@@ -550,6 +546,11 @@ footer a:hover {
 @media screen and (min-width:1280px) {
   nav {
     padding: 44px 40px 40px;
+  }
+
+  .track-nav {
+    padding: 80px 0 100px;
+    text-align: center;
   }
 
   .nr2003-logo {
