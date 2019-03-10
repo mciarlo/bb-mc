@@ -214,13 +214,13 @@ p {
   background: #1F1F1F;
   background-size: 26px 26px;
   color: white;
-  padding: 60px 40px;
+  padding: 80px 40px;
   position: relative;
   overflow: hidden;
 }
 
 .track h2 {
-  margin-bottom: 1em;
+  margin-bottom: .5em;
   position: relative;
   z-index: 2;
 }
@@ -579,7 +579,7 @@ footer a:hover {
 @media screen and (min-width:1420px) {
   .details-sidebar {
     width: 26%;
-    padding: 80px 60px;
+    padding: 120px 60px;
   }
 
   h2 {
