@@ -48,7 +48,6 @@ a {
 
 .wrapper {
   width: 90%;
-  max-width: 1440px;
   margin: 0 auto;
 }
 
@@ -583,5 +582,12 @@ footer a:hover {
   #donate h2,
   #donate form {
     padding-left: 60px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .gallery img {
+    width: 120%;
+    margin-left: -10%;
   }
 }
