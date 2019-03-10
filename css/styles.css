@@ -428,6 +428,10 @@ footer a:hover {
 }
 
 @media screen and (min-width:768px) {
+  .wrapper {
+    width: 96%;
+  }
+
   .nr2003-logo {
     display: block;
     position: absolute;
@@ -461,6 +465,10 @@ footer a:hover {
   h2 {
     letter-spacing: -.2px;
     font-size: 36px;
+  }
+
+  .track {
+    margin-bottom: 30px;
   }
 
   .track p {
