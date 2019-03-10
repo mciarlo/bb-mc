@@ -468,7 +468,7 @@ footer a:hover {
   }
 
   .track {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 
   .track p {
@@ -503,7 +503,7 @@ footer a:hover {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
   }
 
   .details-sidebar {
