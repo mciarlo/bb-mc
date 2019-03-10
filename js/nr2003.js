@@ -7,7 +7,16 @@ var trackIDs = [
 		"tag"	: "chicagoland_2018_night"},
 	{
 		"el"	: "richmond-night-dl",
-		"tag"	: "richmond_2018_night"}
+		"tag"	: "richmond_2018_night"
+	},
+	{
+		"el"	: "charlotte-night-dl",
+		"tag"	: "charlotte_2018_night"
+	},
+	{
+		"el"	: "charlotte-day-dl",
+		"tag"	: "charlotte_2018_day"
+	}
 ];
 
 for (x = 0; x < trackIDs.length; x++) {
