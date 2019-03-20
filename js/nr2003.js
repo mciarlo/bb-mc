@@ -46,8 +46,9 @@ for (x = 0; x < trackIDs.length; x++) {
 		var downloadType =
 		gtag('event', 'download', {
 		  'event_category' : 'nr2003',
-		  'event_label' : downloadItem["tag"]
-		}, hitCallback: sendURL(el));
+		  'event_label' : downloadItem["tag"],
+		  'hitCallback' : sendURL(el)
+		});
 	});
 }
 
