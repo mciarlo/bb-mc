@@ -41,7 +41,7 @@ for (x = 0; x < trackIDs.length; x++) {
 		// Creates a timeout to call `submitForm` after one second.
 		setTimeout(function () {
 			sendURL(el)
-		}, 1000);
+		}, 2000);
 		
 		var downloadType =
 		gtag('event', 'download', {
