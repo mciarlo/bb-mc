@@ -19,16 +19,35 @@ var trackIDs = [
 	}
 ];
 
+// Keeps track of whether or not the form has been submitted.
+// This prevents the form from being submitted twice in cases
+// where `hitCallback` fires normally.
+var formSubmitted = false;
+
+function sendURL(anchor) {
+	if (!formSubmitted) {
+		formSubmitted = true;
+		window.location = $(anchor).attr("href")
+	}
+}
+
 for (x = 0; x < trackIDs.length; x++) {
 	downloadItem = trackIDs[x];
 	el = document.getElementById(downloadItem["el"]);
 
 	el.addEventListener("click", function(e){
+		e.preventDefault();
+		
+		// Creates a timeout to call `submitForm` after one second.
+		setTimeout(function () {
+			sendURL(el)
+		}, 1000);
+		
 		var downloadType =
 		gtag('event', 'download', {
 		  'event_category' : 'nr2003',
 		  'event_label' : downloadItem["tag"]
-		});
+		}, hitCallback: sendURL(el));
 	});
 }
 
