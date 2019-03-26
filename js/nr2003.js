@@ -1,22 +1,9 @@
 var trackIDs = [
-	{
-		"el"	: "chicagoland-day-dl",
-		"tag"	: "chicagoland_2018_day"},
-	{
-		"el"	: "chicagoland-night-dl",
-		"tag"	: "chicagoland_2018_night"},
-	{
-		"el"	: "richmond-night-dl",
-		"tag"	: "richmond_2018_night"
-	},
-	{
-		"el"	: "charlotte-night-dl",
-		"tag"	: "charlotte_2018_night"
-	},
-	{
-		"el"	: "charlotte-day-dl",
-		"tag"	: "charlotte_2018_day"
-	}
+	"chicagoland_2018_day",
+	"chicagoland_2018_night",
+	"richmond_2018_night",
+	"charlotte_2018_night",
+	"charlotte_2018_day"
 ];
 
 function sendURL(anchor) {
@@ -24,8 +11,7 @@ function sendURL(anchor) {
 }
 
 for (x = 0; x < trackIDs.length; x++) {
-	downloadItem = trackIDs[x];
-	el = document.getElementById(downloadItem["el"]);
+	el = document.getElementById(trackIDs[x]);
 
 	el.addEventListener("click", function(e){
 		e.preventDefault();
@@ -39,7 +25,7 @@ for (x = 0; x < trackIDs.length; x++) {
 		var downloadType =
 		gtag('event', 'download', {
 		  'event_category' : 'nr2003',
-		  'event_label' : downloadItem["tag"],
+		  'event_label' : $(anchor).attr("id),
 		  'hitCallback' : sendURL(anchor)
 		});
 	});
