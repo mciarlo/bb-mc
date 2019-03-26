@@ -37,17 +37,18 @@ for (x = 0; x < trackIDs.length; x++) {
 
 	el.addEventListener("click", function(e){
 		e.preventDefault();
+		var anchor = e.target;
 		
 		// Creates a timeout to call `submitForm` after one second.
 		setTimeout(function () {
-			sendURL(el)
+			sendURL(anchor)
 		}, 2000);
 		
 		var downloadType =
 		gtag('event', 'download', {
 		  'event_category' : 'nr2003',
 		  'event_label' : downloadItem["tag"],
-		  'hitCallback' : sendURL(el)
+		  'hitCallback' : sendURL(anchor)
 		});
 	});
 }
