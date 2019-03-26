@@ -19,16 +19,8 @@ var trackIDs = [
 	}
 ];
 
-// Keeps track of whether or not the form has been submitted.
-// This prevents the form from being submitted twice in cases
-// where `hitCallback` fires normally.
-var formSubmitted = false;
-
 function sendURL(anchor) {
-	if (!formSubmitted) {
-		formSubmitted = true;
-		window.location = $(anchor).attr("href")
-	}
+	window.location = $(anchor).attr("href")
 }
 
 for (x = 0; x < trackIDs.length; x++) {
