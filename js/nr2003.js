@@ -25,7 +25,7 @@ for (x = 0; x < trackIDs.length; x++) {
 		var downloadType =
 		gtag('event', 'download', {
 		  'event_category' : 'nr2003',
-		  'event_label' : $(anchor).attr("id),
+		  'event_label' : $(anchor).attr("id"),
 		  'hitCallback' : sendURL(anchor)
 		});
 	});
