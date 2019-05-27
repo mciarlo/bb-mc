@@ -475,6 +475,10 @@ form input[type=submit] {
     display: block;
   }
 
+  nav input[type=submit] {
+    margin: 0;
+  }
+
   .nr2003-logo {
     display: block;
     position: absolute;
