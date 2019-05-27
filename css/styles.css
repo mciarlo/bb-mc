@@ -93,6 +93,7 @@ input[type=submit] {
   font-size: 12px;
   padding-left: 22px;
   padding-right:22px;
+  -webkit-appearance: none;
 }
 
 .button:hover,
