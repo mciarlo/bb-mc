@@ -23,9 +23,7 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
 }
-body {
-  line-height: 1;
-}
+
 ol, ul {
   list-style: none;
 }
@@ -52,8 +50,8 @@ a {
 }
 
 html, body {
-  background-color: #1f1f1f;
-  font-family: "Prompt", Helvetica, sans-serif;
+  background-color: #fff;
+  font-family: "Oswald", Helvetica, sans-serif;
   overflow-x: hidden;
 }
 
@@ -65,35 +63,56 @@ p, a {
   font-family: -apple-system, Helvetica, sans-serif;
 }
 
-.button {
-  border: 2px solid #E72C2C;
-  padding: 14px 26px;
-  font-size: 12px;
-  color: #E72C2C;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  font-weight: bold;
-  display: inline-block;
-  position: relative;
-  z-index: 2;
-}
-
 em {
   font-style: italic;
 }
 
-.button:hover {
+.button,
+input[type=submit] {
+  border: 3px solid #E72C2C;
+  padding: 14px 40px;
+  font-size: 14px;
+  color: #E72C2C;
+  line-height: 1;
+  font-weight: bold;
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+  box-shadow: 0 1px 2px rgba(0,0,0,.1);
+  transform: translate3d(0,0,0);
+  transition: box-shadow 150ms ease-in-out, transform 150ms ease-in-out, background-color 100ms ease-in-out, color 100ms ease-in-out;
+}
+
+input[type=submit] {
+  background-color: white;
+  margin-top: 0;
+  transform-origin: right;
   background-color: #E72C2C;
   color: white;
+  font-size: 12px;
+  padding-left: 22px;
+  padding-right:22px;
+}
+
+.button:hover,
+input[type=submit]:hover {
+  background-color: #E72C2C;
+  color: white;
+  transform: translate3d(0,-1px,0);
+  box-shadow: 0 8px 20px rgba(0,0,0,.3)
 }
 
 nav {
   box-sizing: border-box;
   text-align: center;
   position: relative;
-  background: #1f1f1f url("../images/nav_bg.jpg") top left repeat;
-  background-size: 15px auto;
-  padding: 24px 40px 20px;
+  background: #fff;
+}
+
+nav .wrapper {
+  padding: 28px 0 24px;
+  border-bottom: 1px solid #eaeaea;
 }
 
 nav p {
@@ -102,6 +121,10 @@ nav p {
   text-transform: uppercase;
   letter-spacing: 2px;
   padding: 4px 0;
+}
+
+nav form {
+  display: none;
 }
 
 h2 {
@@ -127,12 +150,13 @@ p {
 }
 
 .track-nav {
-  padding: 50px 0;
+  padding: 50px 0 50px;
   text-align: center;
 }
 
 .track-nav li.new::after,
 .track.new h2::before {
+  font-family: "Helvetica", sans-serif;
   content: "NEW";
   font-size: 11px;
   padding: 2px 3px;
@@ -144,11 +168,12 @@ p {
   position: absolute;
   top: 65px;
   left: 50%;
-  margin-left: -18px
+  margin-left: -18px;
+  pointer-events: none;
 }
 
 .track.new h2::before {
-  top: 0px;
+  top: 5px;
   left: 0;
   margin-left: 0
 }
@@ -211,10 +236,10 @@ p {
 }
 
 .details-sidebar {
-  background: #1F1F1F;
+  background: #1a1a1a;
   background-size: 26px 26px;
   color: white;
-  padding: 80px 40px;
+  padding: 60px 40px;
   position: relative;
   overflow: hidden;
 }
@@ -225,7 +250,7 @@ p {
   z-index: 2;
 }
 
-.track p,
+.details-sidebar p,
 #donate p {
   color: #999;
   line-height: 1.8;
@@ -234,6 +259,7 @@ p {
   max-width: 400px;
   position: relative;
   z-index: 2;
+  margin-top: 2em;
 }
 
 .track a {
@@ -297,7 +323,7 @@ p {
   height: 40px;
   font-size: 0;
   text-indent: -9999px;
-  opacity: 0.3;
+  opacity: 0.5;
   transition: opacity 100ms ease-in-out;
 }
 
@@ -329,17 +355,10 @@ p {
   color: white;
 }
 
-form input[type=image] {
-  margin-top: 60px;
-  width: 186px;
-  height: 57px;
+form input[type=submit] {
+  margin-top: 30px;
   opacity: 1;
-  display: block;
-  transition: opacity 100ms ease-in-out;
-}
-
-form input[type=image]:hover {
-  opacity: .8;
+  display: inline-block;
 }
 
 .sandbox-track {
@@ -347,31 +366,43 @@ form input[type=image]:hover {
   margin-bottom: 40px;
 }
 
-footer {
-  color: #999;
-  background: white url("../images/content_bg.jpg") bottom left repeat-x;
+#if-you-like-us {
+  color: #000;
+  background: white;
   background-size: 32px auto;
   text-align: center;
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  font-size: 12px;
 }
 
-footer img {
-  width: 70px;
-  padding: 14px 0 0;
+#if-you-like-us h2 {
+  font-size: 38px;
 }
 
-footer .wrapper {
-  padding: 40px 0 90px;
+#if-you-like-us img {
+  width: 140px;
+  padding: 0 0 20px 0;
 }
 
-footer a {
+#if-you-like-us .wrapper {
+  padding: 100px 0 120px;
+}
+
+#if-you-like-us input[type=submit] {
+  font-size: 14px;
+  padding: 18px 35px;
+}
+
+#if-you-like-us p {
+  margin-top: 2em;
+}
+
+#if-you-like-us a {
   color: #656565;
+  text-decoration: underline;
 }
 
-footer a:hover {
-  color: #222;
+#if-you-like-us a:hover {
+  color: #E72C2C;
 }
 
 @media screen and (min-width:360px) {
@@ -409,21 +440,21 @@ footer a:hover {
   }
 
   #donate {
-    padding-bottom: 720px;
+    padding-bottom: 680px;
     background-position: 0 120px;
   }
 }
 
 @media screen and (min-width:625px) {
   #donate {
-    padding-bottom: 760px;
+    padding-bottom: 720px;
     background-position: 0 0px;
   }
 }
 
 @media screen and (min-width:720px) {
   #donate {
-    padding-bottom: 820px;
+    padding-bottom: 780px;
   }
 }
 
@@ -432,11 +463,23 @@ footer a:hover {
     width: 96%;
   }
 
+  nav .wrapper {
+    padding: 35px 0
+  }
+
+  nav form {
+    position: absolute;
+    top: 34px;
+    right: 2%;
+    z-index: 9999;
+    display: block;
+  }
+
   .nr2003-logo {
     display: block;
     position: absolute;
-    top: 24px;
-    right: 40px;
+    top: 40px;
+    left: 2%;
     width: 60px;
   }
 
@@ -445,9 +488,13 @@ footer a:hover {
     text-align: center;
   }
 
-  .track-nav li.new::after,
+  .track-nav li.new::after {
+    top: 77px;
+  }
+
   .track.new h2::before {
-    top: 75px;
+    top: 2px;
+    font-size: 14px;
   }
 
   .track-nav li {
@@ -459,7 +506,6 @@ footer a:hover {
   }
 
   h2 {
-    letter-spacing: -.2px;
     font-size: 36px;
   }
 
@@ -475,6 +521,10 @@ footer a:hover {
     width: 280px;
   }
 
+  .details-sidebar p {
+    margin: 3em 0 2em;
+  }
+
   .sandbox-track {
     width: 495px;
     margin-bottom: 60px;
@@ -487,18 +537,43 @@ footer a:hover {
   }
 
   #donate p,
-  #donate h2,
-  #donate form {
+  #donate h2 {
     padding: 0 40px;
+  }
+
+  #if-you-like-us .wrapper {
+    padding: 200px 0 240px;
+  }
+
+  #if-you-like-us img {
+    width: 180px;
+    padding-bottom: 24px;
+  }
+
+  #if-you-like-us h2 {
+    font-size: 51px;
   }
 }
 
 @media screen and (min-width:1024px) {
+  .wrapper {
+    width: 92%;
+  }
+
+  .nr2003-logo {
+    left: 4%;
+    width: 70px;
+  }
+
+  nav form {
+    right: 4%;
+  }
+
   .track {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
   }
 
   .details-sidebar {
@@ -518,11 +593,6 @@ footer a:hover {
 
   #donate {
     background-size: 100% auto;
-  }
-
-  footer img {
-    padding-top: 18px;
-    width: 100px;
   }
 }
 
@@ -544,17 +614,25 @@ footer a:hover {
 }
 
 @media screen and (min-width:1280px) {
-  nav {
-    padding: 44px 40px 40px;
+  nav .wrapper {
+    padding: 44px 0;
+  }
+
+  .track {
+    margin-bottom: 60px;
   }
 
   .track-nav {
-    padding: 80px 0 100px;
+    padding: 70px 0 90px;
     text-align: center;
   }
 
   .nr2003-logo {
-    top: 44px;
+    top: 48px;
+  }
+
+  nav form {
+    top: 42px;
   }
 
   .gallery img {
@@ -566,10 +644,6 @@ footer a:hover {
     font-size: 12px;
   }
 
-  footer img {
-    width: 120px;
-  }
-
   footer .wrapper {
     padding: 140px 0 170px;
     position: relative;
@@ -577,9 +651,21 @@ footer a:hover {
 }
 
 @media screen and (min-width:1420px) {
+  .wrapper {
+    width: 88%;
+  }
+
+  .nr2003-logo {
+    left: 6%;
+  }
+
+  nav form {
+    right: 6%;
+  }
+
   .details-sidebar {
     width: 26%;
-    padding: 120px 60px;
+    padding: 80px 50px;
   }
 
   h2 {
@@ -587,8 +673,7 @@ footer a:hover {
   }
 
   #donate p,
-  #donate h2,
-  #donate form {
+  #donate h2 {
     padding-left: 60px;
   }
 }
