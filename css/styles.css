@@ -183,7 +183,7 @@ p {
   vertical-align: top;
   padding: 84px 0 30px;
   display: inline-block;
-  width: 210px;
+  width: 180px;
   text-align: center;
   position: relative;
 }
@@ -210,11 +210,11 @@ p {
 .track-title,
 .track-status {
   display: block;
-  line-height: 1.6
+  line-height: 1.4
 }
 
 .track-title {
-  font-size: 15px;
+  font-size: 13px;
   color: #222;
   font-weight: 600;
   letter-spacing: 0px;
@@ -503,7 +503,7 @@ form input[type=submit] {
   }
 
   .track-nav li {
-    padding: 94px 0 0;
+    padding: 100px 0 0;
   }
 
   .track-nav img {
