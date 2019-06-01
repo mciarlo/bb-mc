@@ -7,7 +7,7 @@ var trackIDs = [
 	"ism_2019_day"
 ];
 
-timeout = NULL
+var timeout;
 
 function sendURL(anchor) {
 	clearTimeout(timeout)
