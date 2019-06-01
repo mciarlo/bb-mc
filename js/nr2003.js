@@ -3,7 +3,8 @@ var trackIDs = [
 	"chicagoland_2018_night",
 	"richmond_2018_night",
 	"charlotte_2018_night",
-	"charlotte_2018_day"
+	"charlotte_2018_day",
+	"ism_2019_day"
 ];
 
 function sendURL(anchor) {
@@ -16,12 +17,12 @@ for (x = 0; x < trackIDs.length; x++) {
 	el.addEventListener("click", function(e){
 		e.preventDefault();
 		var anchor = e.target;
-		
+
 		// Creates a timeout to call `submitForm` after one second.
 		setTimeout(function () {
 			sendURL(anchor)
 		}, 2000);
-		
+
 		var downloadType =
 		gtag('event', 'download', {
 		  'event_category' : 'nr2003',
