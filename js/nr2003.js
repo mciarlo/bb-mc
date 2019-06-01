@@ -7,7 +7,10 @@ var trackIDs = [
 	"ism_2019_day"
 ];
 
+timeout = NULL
+
 function sendURL(anchor) {
+	clearTimeout(timeout)
 	window.location = $(anchor).attr("href")
 }
 
@@ -19,7 +22,7 @@ for (x = 0; x < trackIDs.length; x++) {
 		var anchor = e.target;
 
 		// Creates a timeout to call `submitForm` after one second.
-		setTimeout(function () {
+		timeout setTimeout(function () {
 			sendURL(anchor)
 		}, 2000);
 
