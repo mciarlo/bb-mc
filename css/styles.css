@@ -618,11 +618,6 @@ form input[type=submit] {
     margin-bottom: 60px;
   }
 
-  .track-nav {
-    padding: 70px 0 90px;
-    text-align: center;
-  }
-
   .nr2003-logo {
     top: 48px;
   }
@@ -653,6 +648,11 @@ form input[type=submit] {
 
   .nr2003-logo {
     left: 6%;
+  }
+
+  .track-nav {
+    padding: 70px 0 90px;
+    text-align: center;
   }
 
   .track-nav li {
