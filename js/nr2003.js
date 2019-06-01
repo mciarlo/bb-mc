@@ -22,7 +22,7 @@ for (x = 0; x < trackIDs.length; x++) {
 		var anchor = e.target;
 
 		// Creates a timeout to call `submitForm` after one second.
-		timeout setTimeout(function () {
+		timeout = setTimeout(function () {
 			sendURL(anchor)
 		}, 2000);
 
