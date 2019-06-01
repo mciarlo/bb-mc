@@ -183,7 +183,7 @@ p {
   vertical-align: top;
   padding: 84px 0 30px;
   display: inline-block;
-  width: 180px;
+  width: 150px;
   text-align: center;
   position: relative;
 }
@@ -191,10 +191,10 @@ p {
 .track-nav img {
   position: absolute;
   height: 90px;
-  width: 150px;
+  width: 120px;
   top: 0;
   left: 50%;
-  margin-left: -75px;
+  margin-left: -60px;
   opacity: .2;
   transition: opacity 150ms ease-in-out;
 }
@@ -646,13 +646,22 @@ form input[type=submit] {
   }
 }
 
-@media screen and (min-width:1420px) {
+@media screen and (min-width:1440px) {
   .wrapper {
     width: 88%;
   }
 
   .nr2003-logo {
     left: 6%;
+  }
+
+  .track-nav li {
+    width: 180px;
+  }
+
+  .track-nav img {
+    width: 150px;
+    margin-left: -75px;
   }
 
   nav form {
