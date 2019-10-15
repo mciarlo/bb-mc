@@ -159,11 +159,10 @@ p {
 .track.new h2::before {
   font-family: "Helvetica", sans-serif;
   content: "NEW";
-  font-size: 11px;
-  padding: 2px 3px;
+  font-size: 10px;
+  padding: 3px 3px;
   color: #fff;
   font-weight: bold;
-  letter-spacing: 1px;
   text-transform: uppercase;
   background-color: #E72C2C;
   position: absolute;
@@ -480,7 +479,7 @@ form input[type=submit] {
   }
 
   .track-nav {
-    padding: 60px 0 80px;
+    padding:40px 0 80px;
     text-align: center;
   }
 
@@ -494,6 +493,7 @@ form input[type=submit] {
   }
 
   .track-nav li {
+    width: 25%;
     padding: 100px 0 0;
   }
 
@@ -572,6 +572,10 @@ form input[type=submit] {
     margin-bottom: 40px;
   }
 
+  .track-nav li {
+    width: 20%;
+  }
+
   .details-sidebar {
     width: 30%;
   }
@@ -618,6 +622,10 @@ form input[type=submit] {
     text-align: center;
   }
 
+  .track-nav li {
+    width: 12%;
+  }
+
   .nr2003-logo {
     top: 48px;
   }
@@ -645,7 +653,7 @@ form input[type=submit] {
   nav .wrapper {
     padding: 44px 0;
   }
-  
+
   .wrapper {
     width: 88%;
   }
@@ -656,10 +664,6 @@ form input[type=submit] {
 
   .track-nav {
     padding: 70px 0 90px;
-  }
-
-  .track-nav li {
-    width: 180px;
   }
 
   .track-nav img {

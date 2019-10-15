@@ -4,7 +4,8 @@ var trackIDs = [
 	"richmond_2018_night",
 	"charlotte_2018_night",
 	"charlotte_2018_day",
-	"ism_2019_day"
+	"ism_2019_day",
+	"charlotte_roval_2019"
 ];
 
 var timeout;
