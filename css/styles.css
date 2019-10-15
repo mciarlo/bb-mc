@@ -482,6 +482,14 @@ form input[type=submit] {
     padding:40px 0 80px;
     text-align: center;
   }
+  
+  .track-nav.row-one {
+    padding-bottom: 0;
+  }
+  
+  .track-nav.row-one {
+    padding-top: 10px;
+  }
 
   .track-nav li.new::after {
     top: 77px;
@@ -563,6 +571,10 @@ form input[type=submit] {
 
   nav form {
     right: 4%;
+  }
+  
+  .track-nav.row-one {
+    padding-top: 30px;
   }
 
   .track {
