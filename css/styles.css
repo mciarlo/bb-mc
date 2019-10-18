@@ -323,10 +323,10 @@ p {
 }
 
 #donate {
-  padding: 80px 0 620px;
+  padding: 120px 0 120px;
   text-align: left;
-  background: #000 url("../images/about_bg_vertical.jpg") 0 440px no-repeat;
-  background-size: 140% auto;
+  background: #000 url("../images/about_bg.jpg") 50% 0 no-repeat;
+  background-size: 240%;
 }
 
 #donate h2 {
@@ -396,56 +396,13 @@ form input[type=submit] {
   color: #E72C2C;
 }
 
-@media screen and (min-width:360px) {
-  #donate {
-    padding-bottom: 480px;
-    background-position: 0 400px;
-    background-size: 100% auto;
-  }
-}
-
-@media screen and (min-width:410px) {
-  #donate {
-    padding-bottom: 480px;
-    background-position: 0 300px;
-  }
-}
-
-@media screen and (min-width:460px) {
-  #donate {
-    padding-bottom: 520px;
-    background-position: 0 220px;
-  }
-}
-
-@media screen and (min-width:480px) {
-  #donate {
-    padding-bottom: 680px;
-    background-position: 0 240px;
-  }
-}
-
 @media screen and (min-width:520px) {
   .details-sidebar img {
     width: 230px;
   }
 
   #donate {
-    padding-bottom: 680px;
-    background-position: 0 120px;
-  }
-}
-
-@media screen and (min-width:625px) {
-  #donate {
-    padding-bottom: 720px;
-    background-position: 0 0px;
-  }
-}
-
-@media screen and (min-width:720px) {
-  #donate {
-    padding-bottom: 780px;
+    background-size: 200%;
   }
 }
 
@@ -482,11 +439,11 @@ form input[type=submit] {
     padding:40px 0 80px;
     text-align: center;
   }
-  
+
   .track-nav.row-one {
     padding-bottom: 0;
   }
-  
+
   .track-nav.row-one {
     padding-top: 10px;
   }
@@ -536,8 +493,9 @@ form input[type=submit] {
 
   #donate {
     padding: 160px 0;
-    background: #111 url("../images/about_bg.jpg") top left no-repeat;
+    background-position: 0 0;
     background-size: 120% auto;
+    margin-bottom: 80px
   }
 
   #donate p,
@@ -572,7 +530,7 @@ form input[type=submit] {
   nav form {
     right: 4%;
   }
-  
+
   .track-nav.row-one {
     padding-top: 30px;
   }
@@ -692,6 +650,10 @@ form input[type=submit] {
     padding: 80px 50px;
   }
 
+  #donate {
+    background-position: 0 -20vh;
+  }
+
   #donate p,
   #donate h2 {
     padding-left: 60px;
@@ -702,5 +664,9 @@ form input[type=submit] {
   .gallery img {
     width: 120%;
     margin-left: -10%;
+  }
+
+  #donate {
+    background-position: 0 -35vh;
   }
 }
