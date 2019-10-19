@@ -500,7 +500,7 @@ form input[type=submit] {
 
   #donate p,
   #donate h2 {
-    padding: 0 40px;
+    padding: 0 120px;
   }
 
   #if-you-like-us .wrapper {
@@ -664,6 +664,11 @@ form input[type=submit] {
   .gallery img {
     width: 120%;
     margin-left: -10%;
+  }
+
+  #donate p,
+  #donate h2 {
+    padding: 0 220px;
   }
 
   #donate {
