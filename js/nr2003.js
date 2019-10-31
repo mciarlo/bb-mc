@@ -2,6 +2,8 @@ var trackIDs = [
 	"chicagoland_2018_day",
 	"chicagoland_2018_night",
 	"richmond_2018_night",
+	"charlotte_2019_night",
+	"charlotte_2019_day",
 	"charlotte_2018_night",
 	"charlotte_2018_day",
 	"ism_2019_day",

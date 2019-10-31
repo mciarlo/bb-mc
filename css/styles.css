@@ -214,7 +214,7 @@ p {
 
 .track-title {
   font-size: 13px;
-  color: #222;
+  color: #333;
   font-weight: 600;
   letter-spacing: 0px;
 }
@@ -253,12 +253,15 @@ p {
 #donate p {
   color: #616161;
   line-height: 1.8;
-  font-size: 14px;
   margin-bottom: 2em;
   max-width: 400px;
   position: relative;
   z-index: 2;
   margin-top: 2em;
+}
+
+.track p {
+  font-size: 13px;
 }
 
 .track a {
@@ -371,7 +374,7 @@ form input[type=submit] {
 
 #if-you-like-us img {
   width: 140px;
-  padding: 0 0 20px 0;
+  padding: 0 0 0 0;
 }
 
 #if-you-like-us .wrapper {
@@ -394,6 +397,54 @@ form input[type=submit] {
 
 #if-you-like-us a:hover {
   color: #E72C2C;
+}
+
+#archives {
+  padding: 120px 0;
+}
+
+#archives h2 {
+  padding-bottom: 2em
+}
+
+#archives li {
+  font-family: Helvetica, sans-serif;
+  padding: 3em 0;
+  border-bottom: 1px solid #eaeaea;
+  position: relative;
+}
+
+#archives li:last-child {
+  border: 0
+}
+
+.download-title {
+  font-size: 16px;
+  display: inline;
+  color: #333;
+}
+
+#archives a {
+  display: inline-block;
+  position: absolute;
+  top: 3.1em;
+  right: 0;
+  padding: 1.2em 3em;
+  background: #f1f1f1;
+  color: #333;
+  font-size: 12px;
+  font-weight: bold;
+  flex: 1;
+  box-shadow: 0 1px 2px rgba(0,0,0,.1);
+  transform: translate3d(0,0,0);
+  transition: box-shadow 150ms ease-in-out, transform 150ms ease-in-out, background-color 100ms ease-in-out, color 100ms ease-in-out;
+}
+
+#archives a:hover {
+  background-color: #E72C2C;
+  color: white;
+  transform: translate3d(0,-1px,0);
+  box-shadow: 0 8px 20px rgba(0,0,0,.3)
 }
 
 @media screen and (min-width:520px) {
@@ -474,10 +525,6 @@ form input[type=submit] {
     margin-bottom: 20px;
   }
 
-  .track p {
-    font-size: 15px;
-  }
-
   .details-sidebar img {
     width: 280px;
   }
@@ -495,7 +542,6 @@ form input[type=submit] {
     padding: 160px 0;
     background-position: 0 0;
     background-size: 120% auto;
-    margin-bottom: 80px
   }
 
   #donate p,
@@ -514,6 +560,15 @@ form input[type=submit] {
 
   #if-you-like-us h2 {
     font-size: 51px;
+  }
+
+  .download-title {
+    font-size: 20px;
+  }
+
+  #archives a {
+    top: 2.5em;
+    font-size: 14px;
   }
 }
 
@@ -564,11 +619,15 @@ form input[type=submit] {
   #donate {
     background-size: 100% auto;
   }
+
+  .download-title {
+    font-size: 22px;
+  }
 }
 
 @media screen and (min-width:1180px) {
   .details-sidebar {
-    width: 25%;
+    width: 24%;
   }
 
   .gallery img {
@@ -617,6 +676,18 @@ form input[type=submit] {
     padding: 140px 0 170px;
     position: relative;
   }
+
+  #archives li {
+    padding: 4em 0;
+  }
+
+  #archives a {
+    top: 4em
+  }
+
+  .download-title {
+    font-size: 28px;
+  }
 }
 
 @media screen and (min-width:1440px) {
@@ -646,7 +717,7 @@ form input[type=submit] {
   }
 
   .details-sidebar {
-    width: 26%;
+    width: 22%;
     padding: 80px 50px;
   }
 
@@ -656,7 +727,7 @@ form input[type=submit] {
 
   #donate p,
   #donate h2 {
-    padding-left: 60px;
+    padding-left: 100px;
   }
 }
 
@@ -666,12 +737,20 @@ form input[type=submit] {
     margin-left: -10%;
   }
 
-  #donate p,
-  #donate h2 {
-    padding: 0 220px;
+  .details-sidebar {
+    width: 20%;
+  }
+
+  .track p {
+    font-size: 14px;
   }
 
   #donate {
     background-position: 0 -35vh;
+  }
+
+  #donate p,
+  #donate h2 {
+    padding: 0 220px;
   }
 }
