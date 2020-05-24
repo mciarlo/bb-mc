@@ -175,9 +175,9 @@ p + a {
   text-transform: uppercase;
   background-color: #E72C2C;
   position: absolute;
-  top: 65px;
+  top: 60px;
   left: 50%;
-  margin-left: -18px;
+  margin-left: -15px;
   pointer-events: none;
 }
 
@@ -338,6 +338,7 @@ form input[type=submit] {
 
 #if-you-like-us .wrapper {
   margin: 0 0 0 10%;
+  width: 80%;
 }
 
 #if-you-like-us a {
@@ -478,7 +479,7 @@ form input[type=submit] {
   }
 
   .track-nav li.new::after {
-    top: 77px;
+    top: 70px;
   }
 
   .track-nav li {
@@ -507,10 +508,6 @@ form input[type=submit] {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-  }
-
-  #if-you-like-us h2 {
-    margin-top :1em;
   }
 
   #if-you-like-us .wrapper {
@@ -586,6 +583,10 @@ form input[type=submit] {
 
   #if-you-like-us {
     padding-bottom: 12em;
+  }
+
+  #if-you-like-us h2 {
+    margin-top :1em;
   }
 
   #if-you-like-us .wrapper {
