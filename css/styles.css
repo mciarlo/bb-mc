@@ -51,7 +51,7 @@ a {
 
 html, body {
   background-color: #fff;
-  font-family: "Oswald", Helvetica, sans-serif;
+  font-family: "Helvetica", "Helvetica Neue", sans-serif;
   overflow-x: hidden;
 }
 
@@ -60,7 +60,7 @@ html, body {
 }
 
 p, a {
-  font-family: -apple-system, Helvetica, sans-serif;
+  font-family: "Helvetica", "Helvetica Neue", sans-serif;
 }
 
 em {
@@ -70,7 +70,7 @@ em {
 .button,
 input[type=submit] {
   border: 3px solid #E72C2C;
-  padding: 14px 40px;
+  padding: 14px 20px;
   font-size: 14px;
   color: #E72C2C;
   line-height: 1;
@@ -91,8 +91,6 @@ input[type=submit] {
   background-color: #E72C2C;
   color: white;
   font-size: 12px;
-  padding-left: 22px;
-  padding-right:22px;
   -webkit-appearance: none;
 }
 
@@ -129,16 +127,29 @@ nav form {
 }
 
 h2 {
-  text-transform: uppercase;
   font-size: 22px;
   line-height: 1;
   position: relative;
   font-weight: bold;
+  margin-bottom: 1em;
+  letter-spacing: -.02em;
+  position: relative;
+  z-index: 2;
 }
 
 p {
   line-height: 1.4;
-  font-weight: 100;
+  font-size: 13px;
+  color: #616161;
+  line-height: 1.6;
+}
+
+p + p {
+  margin-top: 2em;
+}
+
+p + a {
+  margin-top: 2em;
 }
 
 .bbmc-logo {
@@ -157,7 +168,6 @@ p {
 
 .track-nav li.new::after,
 .track.new h2::before {
-  font-family: "Helvetica", sans-serif;
   content: "NEW";
   font-size: 10px;
   padding: 3px 3px;
@@ -236,32 +246,18 @@ p {
 }
 
 .details-sidebar {
-  background: #f1f1f1;
+  background: #f5f7f9;
   color: #111;
   padding: 60px 40px;
   position: relative;
   overflow: hidden;
 }
 
-.track h2 {
-  margin-bottom: .5em;
-  position: relative;
-  z-index: 2;
-}
-
 .details-sidebar p,
-#donate p {
-  color: #616161;
-  line-height: 1.8;
-  margin-bottom: 2em;
+#if-you-like-us p {
   max-width: 400px;
   position: relative;
   z-index: 2;
-  margin-top: 2em;
-}
-
-.track p {
-  font-size: 13px;
 }
 
 .track a {
@@ -270,10 +266,6 @@ p {
 
 .track a:hover {
   color: #fff;
-}
-
-.track.new h2 {
-  padding-top: 30px;
 }
 
 .gallery {
@@ -311,46 +303,22 @@ p {
   right: 12px;
   bottom: 12px;
   z-index: 10;
-  background: #111 url("../images/right_arrow.png") center no-repeat;
+  background: rgba(0,0,0,.5) url("../images/right_arrow.png") center no-repeat;
   background-size: 10px auto;
   width: 40px;
   height: 40px;
   font-size: 0;
   text-indent: -9999px;
-  opacity: 0.5;
-  transition: opacity 100ms ease-in-out;
+  opacity: 0.8;
+  transition: background-color 200ms ease-in-out;
 }
 
 .next-btn:hover {
-  opacity: 1
-}
-
-#donate {
-  padding: 120px 0 120px;
-  text-align: left;
-  background: #000 url("../images/about_bg.jpg") 50% 0 no-repeat;
-  background-size: 240%;
-}
-
-#donate h2 {
-  margin-bottom: 1.4em
-}
-
-#donate h2,
-#donate p {
-  display: block;
-  text-shadow: 0 1px 2px #000;
-}
-
-#donate p,
-#donate h2,
-#donate form {
-  padding: 0 20px;
-  color: white;
+  background-color: #111;
 }
 
 form input[type=submit] {
-  margin-top: 30px;
+  margin-top: 2.5em;
   opacity: 1;
   display: inline-block;
 }
@@ -361,24 +329,7 @@ form input[type=submit] {
 }
 
 #if-you-like-us {
-  color: #000;
-  background: white;
-  background-size: 32px auto;
-  text-align: center;
-  font-size: 12px;
-}
-
-#if-you-like-us h2 {
-  font-size: 36px;
-}
-
-#if-you-like-us img {
-  width: 140px;
-  padding: 0 0 0 0;
-}
-
-#if-you-like-us .wrapper {
-  padding: 100px 0 120px;
+  padding: 4em 0 6em;
 }
 
 #if-you-like-us input[type=submit] {
@@ -386,8 +337,8 @@ form input[type=submit] {
   padding: 18px 35px;
 }
 
-#if-you-like-us p {
-  margin-top: 2em;
+#if-you-like-us .wrapper {
+  margin: 0 0 0 10%;
 }
 
 #if-you-like-us a {
@@ -399,37 +350,65 @@ form input[type=submit] {
   color: #E72C2C;
 }
 
+.charlotte-image {
+  width: 100%;
+}
+
+.half-image {
+  width: 100%;
+}
+
+.about-image {
+  margin: 6em auto 0;
+  display: block;
+  width: 80%;
+}
+
 #archives {
   padding: 120px 0;
 }
 
-#archives h2 {
-  padding-bottom: 2em
+#archives ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #eaeaea;
 }
 
 #archives li {
-  font-family: Helvetica, sans-serif;
-  padding: 3em 0;
-  border-bottom: 1px solid #eaeaea;
+  flex: 1;
+  border-top: 1px solid #eaeaea;
   position: relative;
+  box-sizing: border-box;
 }
 
-#archives li:last-child {
-  border: 0
+#archives li:nth-child(odd) {
+  padding: 2em 5% 2em 0;
+  border-right: 1px solid #eaeaea;
+}
+
+#archives li:nth-child(even) {
+  padding: 2em 0 2em 5%;
 }
 
 .download-title {
   font-size: 16px;
-  display: inline;
+  display: block;
+  margin-bottom: 1em;
   color: #333;
+}
+
+#archives h2 {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: 3em;
+  color: #767676;
 }
 
 #archives a {
   display: inline-block;
-  position: absolute;
-  top: 3.1em;
-  right: 0;
-  padding: 1.2em 3em;
+  padding: .5em 1em;
   background: #f1f1f1;
   color: #333;
   font-size: 12px;
@@ -451,13 +430,13 @@ form input[type=submit] {
   .details-sidebar img {
     width: 230px;
   }
-
-  #donate {
-    background-size: 200%;
-  }
 }
 
 @media screen and (min-width:768px) {
+  h2 {
+    font-size: 36px;
+  }
+
   .wrapper {
     width: 96%;
   }
@@ -487,7 +466,7 @@ form input[type=submit] {
   }
 
   .track-nav {
-    padding:40px 0 80px;
+    padding: 40px 0 80px;
     text-align: center;
   }
 
@@ -503,11 +482,6 @@ form input[type=submit] {
     top: 77px;
   }
 
-  .track.new h2::before {
-    top: 2px;
-    font-size: 14px;
-  }
-
   .track-nav li {
     width: 25%;
     padding: 100px 0 0;
@@ -517,20 +491,39 @@ form input[type=submit] {
     top: 10px;
   }
 
-  h2 {
-    font-size: 36px;
-  }
-
   .track {
     margin-bottom: 20px;
+  }
+
+  .details-sidebar {
+    padding: 60px 30px;
   }
 
   .details-sidebar img {
     width: 280px;
   }
 
-  .details-sidebar p {
-    margin: 3em 0 2em;
+  #if-you-like-us {
+    padding: 8em 0 10em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  #if-you-like-us h2 {
+    margin-top :1em;
+  }
+
+  #if-you-like-us .wrapper {
+    flex: 1;
+    margin-left: 5%;
+  }
+
+  #if-you-like-us .about-image {
+    max-width: 40%;
+    height: auto;
+    margin: 0 5% 0 10%;
+    display: block;
   }
 
   .sandbox-track {
@@ -538,36 +531,11 @@ form input[type=submit] {
     margin-bottom: 60px;
   }
 
-  #donate {
-    padding: 160px 0;
-    background-position: 0 0;
-    background-size: 120% auto;
-  }
-
-  #donate p,
-  #donate h2 {
-    padding: 0 120px;
-  }
-
-  #if-you-like-us .wrapper {
-    padding: 200px 0 240px;
-  }
-
-  #if-you-like-us img {
-    width: 180px;
-    padding-bottom: 24px;
-  }
-
-  #if-you-like-us h2 {
-    font-size: 51px;
-  }
-
   .download-title {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   #archives a {
-    top: 2.5em;
     font-size: 14px;
   }
 }
@@ -616,12 +584,32 @@ form input[type=submit] {
     margin-left: -130px;
   }
 
-  #donate {
-    background-size: 100% auto;
+  #if-you-like-us {
+    padding-bottom: 12em;
+  }
+
+  #if-you-like-us .wrapper {
+    margin-left: 10%;
+  }
+
+  #if-you-like-us .about-image {
+    margin-right: 10%;
+  }
+
+  #archives h2 {
+    font-size: 14px;
+  }
+
+  #archives li:nth-child(odd) {
+    padding: 3em 5% 3em 0;
+  }
+
+  #archives li:nth-child(even) {
+    padding: 3em 0 3em 5%;
   }
 
   .download-title {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 
@@ -643,6 +631,18 @@ form input[type=submit] {
 }
 
 @media screen and (min-width:1280px) {
+  h2 {
+    font-size: 42px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .details-sidebar {
+    padding: 90px 50px;
+  }
+
   .track {
     margin-bottom: 60px;
   }
@@ -652,15 +652,7 @@ form input[type=submit] {
   }
 
   .track-nav li {
-    width: 12%;
-  }
-
-  .nr2003-logo {
-    top: 48px;
-  }
-
-  nav form {
-    top: 42px;
+    width: 20%;
   }
 
   .gallery img {
@@ -680,19 +672,19 @@ form input[type=submit] {
   #archives li {
     padding: 4em 0;
   }
-
-  #archives a {
-    top: 4em
-  }
-
-  .download-title {
-    font-size: 28px;
-  }
 }
 
 @media screen and (min-width:1440px) {
   nav .wrapper {
     padding: 44px 0;
+  }
+
+  .nr2003-logo {
+    top: 48px;
+  }
+
+  nav form {
+    top: 42px;
   }
 
   .wrapper {
@@ -707,6 +699,10 @@ form input[type=submit] {
     padding: 70px 0 90px;
   }
 
+  .track-nav li {
+    padding: 100px 0 20px;
+  }
+
   .track-nav img {
     width: 150px;
     margin-left: -75px;
@@ -718,39 +714,36 @@ form input[type=submit] {
 
   .details-sidebar {
     width: 22%;
-    padding: 80px 50px;
-  }
-
-  #donate {
-    background-position: 0 -20vh;
-  }
-
-  #donate p,
-  #donate h2 {
-    padding-left: 100px;
   }
 }
 
 @media screen and (min-width: 1920px) {
+  h2 {
+    font-size: 48px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
   .gallery img {
     width: 120%;
     margin-left: -10%;
+  }
+
+  .track-nav li {
+    width: 10%;
   }
 
   .details-sidebar {
     width: 20%;
   }
 
-  .track p {
-    font-size: 14px;
+  #if-you-like-us .wrapper {
+    margin-left: 15%;
   }
 
-  #donate {
-    background-position: 0 -35vh;
-  }
-
-  #donate p,
-  #donate h2 {
-    padding: 0 220px;
+  #if-you-like-us .about-image {
+    margin-right: 15%;
   }
 }
