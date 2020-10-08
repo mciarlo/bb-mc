@@ -483,12 +483,12 @@ form input[type=submit] {
   }
 
   .track-nav li {
-    width: 25%;
-    padding: 100px 0 0;
+    width: 15%;
+    padding: 120px 0 0;
   }
 
   .track-nav img {
-    top: 10px;
+    top: 30px;
   }
 
   .track {
@@ -560,10 +560,6 @@ form input[type=submit] {
     flex-direction: row;
     flex-wrap: nowrap;
     margin-bottom: 40px;
-  }
-
-  .track-nav li {
-    width: 20%;
   }
 
   .details-sidebar {
@@ -652,10 +648,6 @@ form input[type=submit] {
     text-align: center;
   }
 
-  .track-nav li {
-    width: 20%;
-  }
-
   .gallery img {
     width: 120%;
     margin-left: -10%;
@@ -701,7 +693,11 @@ form input[type=submit] {
   }
 
   .track-nav li {
-    padding: 100px 0 20px;
+    padding: 120px 0 20px;
+  }
+
+  .track-nav img {
+    top: 20px;
   }
 
   .track-nav img {
