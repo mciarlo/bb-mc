@@ -762,6 +762,14 @@ form input[type=submit] {
     font-size: 20px;
   }
 
+  .performance-hero .bbmc-logo {
+    top: 80px;
+  }
+
+  .performance-hero .heading {
+    bottom: 80px;
+  }
+
   .performance-hero h1 {
     font-size: 51px;
   }
@@ -829,6 +837,14 @@ form input[type=submit] {
 
   #archives li {
     padding: 4em 0;
+  }
+
+  .performance-hero .bbmc-logo {
+    top: 100px;
+  }
+
+  .performance-hero .heading {
+    bottom: 100px;
   }
 
   .performance-hero h1 {
