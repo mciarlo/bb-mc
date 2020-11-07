@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+  <html>
+  <head itemscope itemtype="http://schema.org/WebSite">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+
+    <meta name="Author" content="Michael Ciarlo">
+    <meta name="robots" content="noodp">
+    <title itemprop="name">BBMC Performance Guide</title>
+    <meta name="Description" content="BBMC tracks are made by Bryan Bieniek and Michael Ciarlo. We’re a team of passionate sim racers who decided to create new tracks for our favorite game — Nascar Racing 2003 Season. Our goal is to find the limits of the Papyrus racing engine while producing the most authentic and beautiful environments we can." />
+    <meta name="Keywords" content="nr2003, nascar, papyrus, tracks, bb-mc, bbmc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@600&display=swap" rel="stylesheet">
+
+    <link href='../css/styles.css' rel='stylesheet' type='text/css' />
+    <link rel="shortcut icon" type="image/png" href="../favicon.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon.png" />
+    <link rel="icon" type="image/png" sizes="64x64" href="../favicon64.png">
+    <link rel="icon" type="image/png" sizes="144x144" href="../favicon144.png">
+    <link rel="icon" type="image/png" sizes="128x128" href="../favicon128.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../favicon192.png">
+  </head>
+  <body class="performance-guide">
+    <section class="performance-hero">
+      <a href="/" title="Go to BBMC tracks"><img class="bbmc-logo" src="../images/bbmc_logo_white.svg"/></a>
+
+      <div class="heading">
+        <h1>Performance guide</h1>
+        <p>Updated November 2020</p>
+      </div>
+
+      <img src="../images/performance-hero.jpg" alt="Daytona International Speedway for NR2003"/>
+    </section>
+    <section>
+      <div class="wrapper flex">
+        <h2>Post-install optimizations</h2>
+        <ul>
+          <li><strong>Updating the graphics configuration</strong><span>Open your rend_dx.ini file in your Nascar Racing 2003 Season folder. Set the TextureSetSize value to -1. Set the AnisotropicLevel to 0.</span></li><li><strong>NVIDIA / AMD enhancements</strong><span>Open your NVIDIA or AMD control panel and set the texture filtering quality, anistrophic filtering, and anti-aliasing settings to fit your desired qualty and performance.</span></li><li><strong>4GB patch</strong><span>Nr2003 is limited to 2GB of RAM. Install the 4GB patch to double the RAM available to the game to 4GB.</span></li>
+        </ul>
+      </div>
+      <img src="../images/performance_01.jpg" class="full-bleed" alt="Daytona International Speedway for NR2003"/>
+    </section>
+
+    <section>
+      <div class="wrapper flex">
+        <h2>Troubleshooting</h2>
+        <ul>
+          <li><strong>Remove DLLs</strong><span>Remove the D3D8.dll or D3D9.dll, DirectX 8 games will load that file automatically if it's located where the executable is (same with D3D9.dll and DirectX 9).</span></li><li><strong>Compress car and pit crew textures</strong><span>Make sure all of your cars are compressed to 2048 or lower. Compress pit crews to 1024 or lower. You can reduce car file sizes significantly using WinMip and compression.</span></li><li><strong>Disable Solar effects</strong><span>Disabling solar effects gives a good performance boost. It appears that modern graphics drivers aren't able to draw this effect as efficiently as in the past.</span></li><li><strong>Reduce the number of sounds</strong><span>Sounds are important for the game, but can cost frames. Reduce the number of sounds played for additional frame rate gains.</span></li>
+        </ul>
+      </div>
+
+      <img src="../images/performance_02.jpg" class="full-bleed" alt="Daytona International Speedway for NR2003"/>
+
+    </section>
+
+    <section>
+      <div class="wrapper flex">
+        <h2>Tips for track makers</h2>
+        <ul>
+          <li><strong>Keep most textures to 1024px</strong><span>Textures up to 4096 are supported but should be used sparingly. Prefer 1024px sized mips and avoid alpha channels where possible. Textures using an invisible color are much smaller than those with an alpha channel.</span></li><li><strong>Limit the number of textures per model</strong><span>Sandbox will stop loading 3dos and TSDs if the number of project files becomes too great. Try to texture any custom 3d objects with the lowest amount of textures possible.</span></li><li><strong>Keep poly counts below 500</strong><span>Most users will have graphical artifacts and distorted models beyond 650 object faces. BBMC uses a soft limit of 500 faces to improve performance. Where possible, break up larger models into pieces of 300 faces or less.</span></li><li><strong>Combine single objects into groups</strong><span>Wherever possible you should combine objects like lights or trees to keep the number of objects in your sandbox project low. Sandbox will stop loading your objects or even the project if the number of object placements becomes too great.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <img src="../images/performance_03.jpg" class="full-bleed" alt="Bristol Motor Speedway for NR2003"/>
+    </section>
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-72804362-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-72804362-2');
+    </script>
+  </body>
+</html>
