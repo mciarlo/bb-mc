@@ -9,9 +9,9 @@ var trackIDs = [
 	"ism_2019_day",
 	"charlotte_roval_2019",
 	"bristol_2019_day",
-	"bristol_2019_night"
-	// "daytona_2020_day",
-	// "daytona_2020_night"
+	"bristol_2019_night",
+	"daytona_2020_day",
+	"daytona_2020_night"
 ];
 
 var timeout;

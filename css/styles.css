@@ -39,44 +39,18 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-
-a:link {
-  text-decoration: none;
-  color: #E72C2C;
-  transition: color 100ms ease-in-out;
-}
-
-a:hover,
-a:visited:hover {
-  color: #111;
-}
-
-a:visited {
-  color: #9f4242;
-}
-
-.wrapper {
-  width: 90%;
-  margin: 0 auto;
-}
-
-.track,
-#archives,
-#if-you-like-us {
-  max-width: 1440px;
-  margin: 0 auto;
-}
-
 html, body {
   background-color: #fff;
   font-family: "Rubik", "Helvetica", "Helvetica Neue", sans-serif;
   overflow-x: hidden;
 }
 
-.page-container {
-  background: white;
-}
-
+/***********************************
+ ***********************************
+ * GENERAL
+ ***********************************
+ ***********************************
+ */
 p, a, li {
   font-family: "Helvetica", "Helvetica Neue", sans-serif;
 }
@@ -94,28 +68,21 @@ code {
 .button,
 input[type=submit] {
   border: 3px solid #E72C2C;
-  padding: 14px 20px;
-  font-size: 14px;
+  padding: 10px 20px;
+  font-size: 11px;
   color: #E72C2C;
   line-height: 1;
   font-weight: bold;
   display: inline-block;
   position: relative;
+  text-transform: uppercase;
+  letter-spacing: .02em;
   z-index: 2;
   cursor: pointer;
+  background-color: white;
   box-shadow: 0 1px 2px rgba(0,0,0,.1);
   transform: translate3d(0,0,0);
   transition: box-shadow 150ms ease-in-out, transform 150ms ease-in-out, background-color 100ms ease-in-out, color 100ms ease-in-out;
-}
-
-input[type=submit] {
-  background-color: white;
-  margin-top: 0;
-  transform-origin: right;
-  background-color: #E72C2C;
-  color: white;
-  font-size: 12px;
-  -webkit-appearance: none;
 }
 
 .button:hover,
@@ -126,6 +93,63 @@ input[type=submit]:hover {
   box-shadow: 0 8px 20px rgba(0,0,0,.3)
 }
 
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: #E72C2C;
+  transition: color 100ms ease-in-out;
+}
+
+a:hover {
+  color: #111;
+}
+
+.track,
+#archives,
+#if-you-like-us {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.page-container {
+  background: white;
+}
+
+h2 {
+  font-size: 22px;
+  line-height: 1.3;
+  font-weight: bold;
+  margin-bottom: 1em;
+  letter-spacing: -.03em;
+  position: relative;
+  z-index: 2;
+  text-transform: uppercase;
+}
+
+p, li {
+  font-size: 12px;
+  color: #616161;
+  line-height: 1.8;
+}
+
+p + p {
+  margin-top: 2em;
+}
+
+p + a {
+  margin-top: 2em;
+}
+
+/***********************************
+ ***********************************
+ * NAV
+ ***********************************
+ ***********************************
+ */
 nav {
   box-sizing: border-box;
   background: #fff;
@@ -155,52 +179,33 @@ nav form {
   display: none;
 }
 
-.performance-guide nav {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 9999;
-  background: transparent;
+nav a {
+  text-transform: uppercase;
+  font-family: "Rubik", "Helvetica", "Helvetica Neue", sans-serif;
+  font-size: 11px;
+  color: #E72C2C;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+nav li.active a,
+nav a:hover {
+  color: #111;
 }
 
 .performance-guide nav .wrapper {
   border: 0;
-  width: 90%;
 }
 
-h2 {
-  font-size: 22px;
-  line-height: 1.3;
-  font-weight: bold;
-  margin-bottom: 1em;
-  letter-spacing: -.03em;
-  position: relative;
-  z-index: 2;
-  text-transform: uppercase;
-}
-
-p, li {
-  font-size: 12px;
-  color: #616161;
-  line-height: 1.8;
-}
-
-p + p {
-  margin-top: 2em;
-}
-
-p + a {
-  margin-top: 2em;
-}
-
+/***********************************
+ ***********************************
+ * TRACK NAV
+ ***********************************
+ ***********************************
+ */
 .bbmc-logo {
   width: 140px;
   display: inline-block;
-}
-
-.nr2003-logo {
-  width: 80px;
 }
 
 .track-nav {
@@ -227,7 +232,7 @@ p + a {
 }
 
 .track.new h2::before {
-  top: 5px;
+  top: 5px;s
   left: 0;
   margin-left: 0
 }
@@ -252,15 +257,16 @@ p + a {
   transition: opacity 150ms ease-in-out;
 }
 
+.track-nav a {
+  color: #909090;
+  font-size: 12px;
+}
+
 .track-nav a:hover img {
   opacity: 1;
 }
 
-.track-nav a:hover .track-title,
-nav li.active a:link,
-nav li.active a:visited,
-nav a:hover,
-nav a:link:hover {
+.track-nav a:hover .track-title {
   color: #E72C2C
 }
 
@@ -270,11 +276,9 @@ nav a:link:hover {
   line-height: 1.4
 }
 
-.track-title,
-nav a:link,
-nav a:visited {
+.track-title {
   font-size: 11px;
-  color: #333;
+  color: #111;
   font-weight: 600;
   font-family: "Rubik", "Helvetica", "Helvetica Neue", sans-serif;
   text-transform: uppercase;
@@ -286,16 +290,24 @@ nav a:visited {
   color: #7B7B7B;
 }
 
-.track-status {
-  font-size: 12px;
-  color: #7B7B7B;
-  text-align: center;
-}
-
+/***********************************
+ ***********************************
+ * TRACKS
+ ***********************************
+ ***********************************
+ */
 .track {
-  background: #1F1F1F;
+  background: #f1f1f1;
   position: relative;
   margin-bottom: 40px;
+}
+
+.track .button {
+  background-color: #f1f1f1;
+}
+
+.track .button:hover {
+  background-color: #E72C2C;
 }
 
 .details-sidebar {
@@ -362,7 +374,6 @@ nav a:visited {
   height: 40px;
   font-size: 0;
   text-indent: -9999px;
-  opacity: 0.8;
   transition: background-color 200ms ease-in-out;
 }
 
@@ -371,22 +382,23 @@ nav a:visited {
 }
 
 form input[type=submit] {
-  margin-top: 2.5em;
+  margin-top: 3.5em;
   opacity: 1;
   display: inline-block;
 }
 
-.sandbox-track {
-  width: 80%;
-  margin-bottom: 40px;
-}
-
+/***********************************
+ ***********************************
+ * ABOUT
+ ***********************************
+ ***********************************
+ */
 #if-you-like-us {
   padding: 4em 0 6em;
 }
 
 #if-you-like-us input[type=submit] {
-  font-size: 14px;
+  font-size: 12px;
   padding: 18px 35px;
 }
 
@@ -418,8 +430,14 @@ form input[type=submit] {
   width: 80%;
 }
 
+/***********************************
+ ***********************************
+ * ARCHIVES
+ ***********************************
+ ***********************************
+ */
 #archives {
-  padding: 6em 0 0;
+  padding: 6em 0;
 }
 
 #archives ul {
@@ -480,35 +498,23 @@ form input[type=submit] {
   box-shadow: 0 8px 20px rgba(0,0,0,.3)
 }
 
-/*
-* PERFORMANCE GUIDE
-*/
+/***********************************
+ ***********************************
+ * PERFORMANCE GUIDE
+ ***********************************
+ ***********************************
+ */
 .performance-hero {
   position: relative;
 }
 
-.performance-hero .bbmc-logo {
-  position: absolute;
-  top: 40px;
-  left: 35%;
-  width: 100px;
-  z-index: 9999;
-}
-
-.performance-hero img {
-  width: 180%;
-  margin-left: -30%;
-}
-
-.performance-hero .heading {
-  position: absolute;
-  bottom: 40px;
-  left: 5%;
-  z-index: 9999;
-}
-
 .performance-hero h1 {
-  font-size: 32px;
+  position: absolute;
+  top: 80%;
+  left: 10%;
+  width: 70%;
+  z-index: 9999;
+  font-size: 28px;
   line-height: .9;
   padding-bottom: .4em;
   text-transform: uppercase;
@@ -523,7 +529,7 @@ form input[type=submit] {
 }
 
 .wrapper.flex {
-  padding: 40px 0;
+  padding: 80px 0;
   width: 90%;
   max-width: 100%;
   position: relative;
@@ -563,26 +569,12 @@ form input[type=submit] {
   display: block;
 }
 
-.performance-guide footer .wrapper {
+footer .wrapper {
   border-top: 1px solid #f1f1f1;
-  padding: 80px 0;
 }
 
-.performance-guide footer form {
-  position: absolute;
-  top: 40px;
-  right: 0;
-}
-
-footer {
-  text-align: center;
-  padding: 6em 0;
-}
-
-@media screen and (min-width:520px) {
-  .details-sidebar img {
-    width: 230px;
-  }
+footer p {
+  color: #999;
 }
 
 @media screen and (min-width:768px) {
@@ -591,19 +583,20 @@ footer {
   }
 
   .wrapper {
-    width: 96%;
+    width: 90%;
+    max-width: 1440px;
   }
+
+  /* .wrapper.flex {
+    width: 80%;
+  } */
 
   nav {
     text-align: right;
   }
 
   nav .wrapper {
-    padding: 0
-  }
-
-  .performance-guide nav .wrapper {
-    width: 80%;
+    padding: 1em 0
   }
 
   nav form {
@@ -614,20 +607,17 @@ footer {
     margin: 0;
   }
 
-  .nr2003-logo {
-    width: 60px;
-  }
-
   .bbmc-logo {
     position: absolute;
-    top: 45px;
+    top: 68px;
     left: 0;
   }
 
-  nav li {
+  nav li,
+  nav li:first-child {
     display: inline-block;
-    padding: 30px 0;
-    margin-right: 40px;
+    padding: 40px 0;
+    margin-right: 30px;
   }
 
   nav li:last-child {
@@ -636,7 +626,7 @@ footer {
   }
 
   .track-nav {
-    padding: 40px 0 80px;
+    padding: 40px 0 90px;
     text-align: center;
   }
 
@@ -694,11 +684,6 @@ footer {
     display: block;
   }
 
-  .sandbox-track {
-    width: 495px;
-    margin-bottom: 60px;
-  }
-
   .download-title {
     font-size: 18px;
   }
@@ -715,34 +700,33 @@ footer {
 
   .performance-hero .bbmc-logo {
     top: 80px;
-    left: 10%;
+    left: 5%;
   }
 
   .performance-hero .heading {
-    bottom: 80px;
-    left: 10%;
+    left: 5%;
   }
 
   .performance-hero h1 {
     font-size: 38px;
   }
 
-  .wrapper.flex {
+  .wrapper.flex,
+  footer .wrapper.flex {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     padding: 80px 0;
-    width: 80%;
   }
 
   .wrapper.flex h2 {
-    width: 30%;
+    width: 20%;
     max-width: 100%;
     font-size: 24px;
   }
 
   .wrapper.flex ul {
-    width: 50%;
+    width: 60%;
     margin-left: 20%;
   }
 
@@ -776,14 +760,6 @@ footer {
 @media screen and (min-width:1024px) {
   p, li {
     font-size: 13px;
-  }
-
-  .wrapper {
-    width: 92%;
-  }
-
-  .nr2003-logo {
-    width: 100px;
   }
 
   .track-nav.row-one {
@@ -825,7 +801,7 @@ footer {
   }
 
   #archives {
-    padding: 12em 0 0;
+    padding: 8em 0;
   }
 
   #archives h2 {
@@ -854,17 +830,18 @@ footer {
   }
 
   .wrapper.flex {
-    padding: 120px 0;
+    padding: 100px 0;
   }
 
   .wrapper.flex li {
     padding-top: 50px;
   }
 
-  footer {
-    padding: 8em 0;
+  .next-btn {
+    background-color: rgba(0,0,0,.5);
+    width: 60px;
+    height: 60px;
   }
-
 }
 
 @media screen and (min-width:1180px) {
@@ -910,11 +887,6 @@ footer {
     font-size: 12px;
   }
 
-  footer .wrapper {
-    padding: 140px 0 170px;
-    position: relative;
-  }
-
   #archives li {
     padding: 4em 0;
   }
@@ -924,16 +896,8 @@ footer {
     width: 160px;
   }
 
-  .performance-hero .heading {
-    bottom: 100px;
-  }
-
   .performance-hero h1 {
     font-size: 67px;
-  }
-
-  .wrapper.flex {
-    padding: 140px 0;
   }
 
   .wrapper.flex li {
@@ -950,25 +914,17 @@ footer {
 }
 
 @media screen and (min-width:1440px) {
-  nav .wrapper {
-    width: 88%;
-    max-width: 1440px;
-  }
-
   nav li {
     padding: 40px 0;
   }
 
-  .bbmc-logo {
-    top: 58px;
+  .wrapper,
+  .wrapper.flex {
+    width: 80%;
   }
 
-  .nr2003-logo {
-    top: 48px;
-  }
-
-  .wrapper {
-    width: 88%;
+  nav .wrapper {
+    width: 80%;
   }
 
   .track-nav {
@@ -993,31 +949,15 @@ footer {
   }
 
   .performance-hero .bbmc-logo {
-    left: 15%;
+    left: 10%;
   }
 
   .performance-hero .heading {
-    left: 15%;
+    left: 10%;
   }
 
   .wrapper.flex {
-    width: 70%;
-  }
-
-  .performance-guide nav .wrapper {
-    width: 70%;
-  }
-
-  .performance-guide .full-bleed {
-    width: 80%;
-  }
-
-  .performance-guide footer .wrapper {
-    padding: 100px 0;
-  }
-
-  .performance-guide footer form {
-    top: 60px;
+    padding: 140px 0;
   }
 }
 
@@ -1033,10 +973,6 @@ footer {
   .gallery img {
     width: 120%;
     margin-left: -10%;
-  }
-
-  .track-nav li {
-    width: 10%;
   }
 
   .details-sidebar {
